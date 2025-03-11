@@ -1,5 +1,5 @@
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>pv", vim.cmd.Ex)
+vim.keymap.set("n", "<leader>pv", vim.cmd.Ex, { desc = "netrw" })
 vim.keymap.set("n", "<leader>ee", vim.cmd.NvimTreeToggle,{desc = "nvim-tree toggle"})
 vim.keymap.set("n", "<Tab>", vim.cmd.BufferLineCycleNext)
 vim.keymap.set("n", "<S-Tab>", vim.cmd.BufferLineCyclePrev)
@@ -19,3 +19,5 @@ vim.api.nvim_set_keymap('n', '<A-k>', ':m .-2<CR>==', { noremap = true, silent =
 vim.api.nvim_set_keymap('v', '<A-j>', ":m '>+1<CR>gv=gv", { noremap = true, silent = true, desc = 'Move selection down' })
 -- Move selected lines up
 vim.api.nvim_set_keymap('v', '<A-k>', ":m '<-2<CR>gv=gv", { noremap = true, silent = true, desc = 'Move selection up' })
+vim.keymap.set('n', '<leader><F5>', vim.cmd.UndotreeToggle, { desc = "undotree"})
+
